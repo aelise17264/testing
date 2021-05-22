@@ -2,6 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme'; //render out a single instance of a component & none of its children
 import App from '../App';
 import CommentBox from '../CommentBox';
+import CommentList from '../CommentList';
 
 // test('renders learn react link', () => {
 //   render(<App />);
@@ -13,6 +14,14 @@ it('shows a comment box', () => {
   const wrapped = shallow(<App />);
   //wrapped has additional functionality on top of it
   expect(wrapped.find(CommentBox).length).toEqual(1)
+  //find will return an array with the number of times CommentBox was found
+  
+});
+
+it('shows the comment list', () => {
+  const wrapped = shallow(<App />);
+  //wrapped has additional functionality on top of it
+  expect(wrapped.find(CommentList).length).toEqual(1)
   //find will return an array with the number of times CommentBox was found
   
 });
