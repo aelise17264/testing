@@ -1,6 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {shallow} from 'enzyme'; //render out a single instance of a component & none of its children
 import App from '../App';
+import CommentBox from '../CommentBox';
 
 // test('renders learn react link', () => {
 //   render(<App />);
@@ -9,10 +10,9 @@ import App from '../App';
 // });
 
 it('shows a comment box', () => {
-  const div = document.createElement('div');
-
-  ReactDOM.render(<App />, div);
-
-  expect(div).toHaveAnInstanceOf(<CommentBox />)  
-  ReactDOM.unmountComponentAtNode(div)
+  const wrapped = shallow(<App />);
+  //wrapped has additional functionality on top of it
+  expect(wrapped.find(CommentBox).length).toEqual(1)
+  //find will return an array with the number of times CommentBox was found
+  
 });
