@@ -1,8 +1,8 @@
 import React from 'react';
 import {shallow} from 'enzyme'; //render out a single instance of a component & none of its children
-import App from '../App';
-import CommentBox from '../CommentBox';
-import CommentList from '../CommentList';
+import App from 'Components/App';
+import CommentBox from 'Components/CommentBox';
+import CommentList from 'Components/CommentList';
 
 // test('renders learn react link', () => {
 //   render(<App />);
