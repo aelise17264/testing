@@ -13,5 +13,18 @@ code {
     monospace;
 }
 
+.commentBox{
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+  justify-content: space-between;
+  padding: 2%;
+}
+textarea{
+  height: 10vh;
+  margin-bottom: 3%;
+}
 
-
+button{
+  width: 20vw;
+}

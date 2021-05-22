@@ -2,6 +2,10 @@ import React from 'react';
 
 export default function CommentBox() {
     return (
-    <div>This is the comment box</div>
+    <div className="commentBox">
+    <p>This is the comment box</p>
+    <textarea placeholder="write a comment here"></textarea>
+    <button type="submit">Submit</button>
+    </div>
     )
 }
