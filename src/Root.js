@@ -3,12 +3,10 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import reducers from 'Reducers';
 
-export default (props) =>{
+export default ({children, initialState = {}}) =>{
     return(
-        <Provider store={createStore(reducers, {})}>
-            {props.children} 
+        <Provider store={createStore(reducers, initialState)}>
+            {children} 
         </Provider>
     )
 }
-
-            //allows us to take the component that we created & allows us to wrap other components inside
