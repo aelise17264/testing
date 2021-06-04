@@ -24,7 +24,8 @@ export default ChildComponent => {
         }
     }
         render() {
-            return <ChildComponent/>;
+            return <ChildComponent {...this.props}/>;
+        //takes any props that were passed to our HOC & passes them straight down to the child
         }
     }
     

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
-
+import requireAuth from 'Components/requireAuth';
 
 class CommentBox extends Component{
     state = { comment: ""};
@@ -39,4 +39,7 @@ class CommentBox extends Component{
 }
 
 
-export default connect(null, actions) (CommentBox);
+export default connect(null, actions) (requireAuth(CommentBox));
+//action creators are being passed as props to the commentbox component via the connect tag
+//commentbox gets other props too from parent component App
+// we need to pass down props from parent to child, make sure we don't break the chain!
